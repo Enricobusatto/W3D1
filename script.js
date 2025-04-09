@@ -62,8 +62,9 @@ function giveMeRandom(n) {
     for (let i = 0; i < n; i++) {
       result.push(Math.floor(Math.random() * 10));
     }
-    return result;}
-    let numero = 3;
+    return result;
+} 
+let numero = 3;
 
     console.log(giveMeRandom(numero));
     
@@ -71,22 +72,39 @@ function giveMeRandom(n) {
 /* ESERCIZIO 1
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+function calcoloArea(l1, l2) {
+    const result = l1 * l2; 
+    console.log("L'area del rettangolo è:", result);
+    return result;
+  }
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(n) {
+    const diff = Math.abs(n - 19);
+    if (diff > 19) {
+      return diff * 3;
+    } else {
+      return diff;
+    }
+  }
+    console.log(crazyDiff(10));  
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function codify(str) {
+  if (str.startsWith("code")) {
+    return str;
+  } else {
+    return "code" + str;
+  }
+}console.log(codify(" school"));   
+
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -94,10 +112,19 @@ function giveMeRandom(n) {
  SUGGERIMENTO: operatore modulo
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(n) {
+    if (n > 0 && (n % 3 === 0 || n % 7 === 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }console.log(check3and7(21));
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(str) {
+    return str.slice(1, -1);
+  }
+  console.log(cutString("epicode"));
